@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "572492262825",
+    "project_id": "nksmm-ff23c",
+    "storage_bucket": "nksmm-ff23c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572492262825:android:105cac45ddc90a1800e8b8",
+        "android_client_info": {
+          "package_name": "com.example.nksmm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfQpVynC-EMdG5dVK5CMgxIFJOL2Zplk4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
