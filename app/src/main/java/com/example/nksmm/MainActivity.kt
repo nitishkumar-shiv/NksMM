@@ -50,8 +50,7 @@ class MainActivity : ComponentActivity(), GalleryHandler.GalleryListener  {
     }
 
     override fun onImageLoaded(imagePath: String) {
-        //uploadImageToStorage(imagePath)
-        Log.d("Nmm ", imagePath)
+        uploadImageToStorage(imagePath)
     }
 
     @RequiresApi(Build.VERSION_CODES.S)

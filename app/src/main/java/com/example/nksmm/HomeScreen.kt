@@ -13,6 +13,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -53,6 +54,7 @@ import io.jetchart.pie.PieChart
 import io.jetchart.pie.Pies
 import io.jetchart.pie.Slice
 import io.jetchart.pie.renderer.FilledSliceDrawer
+import kotlinx.coroutines.delay
 
 @Composable
 fun HomeScreen(
@@ -61,7 +63,7 @@ fun HomeScreen(
         mutableStateOf("hi")
     }
     val requestText =  remember {
-        mutableStateOf("Please Enter Your Name~")
+        mutableStateOf(" ")
     }
     val flag0 = remember {
         mutableStateOf(true)
@@ -98,9 +100,10 @@ fun HomeScreen(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 if (flag0.value) {
-                    TextField(value = requestText.value, onValueChange = { newText ->
+                    TextField(label = { Text(text = "Please Enter Your Name~")},
+                        value = requestText.value, onValueChange = { newText ->
                         requestText.value = newText
-                        flag1.value = !flag1.value
+                        flag1.value = true
                     })
                 }
                 if (flag1.value) {
@@ -152,6 +155,7 @@ fun HomeScreen(
                         }) {
                         Text(text = "\"CLICK ME TO SEE THE MAGIC\"")
                     }
+                    Spacer(modifier = Modifier.height(20.dp))
                 }
                 if(flag3.value) {
                     Spacer(modifier = Modifier.height(20.dp))
@@ -246,13 +250,25 @@ fun HomeScreen(
                     Text(
                         text = "Moreover, the allure of magic can lead individuals down a path of obsession and addiction, blurring the lines between reality and fantasy. Those who become ensnared by its spell may lose touch with the world around them, becoming isolated and detached from the responsibilities of everyday life. This obsession can lead to reckless behavior and irrational decision-making, putting both themselves and others at risk.",
                         fontSize = 30.sp,
-                        color = Blue
+                        color = Black
                     )
                     Spacer(modifier = Modifier.height(20.dp))
+                    Text(text = "wait for 120 seconds to to see the last magic:")
+                        val currentColor = remember { mutableStateOf(Color.Black) }
+                        val colorIndex = remember { mutableStateOf(0) }
+
+                        LaunchedEffect(Unit) {
+                            val colors = listOf(Color.Red, Color.Green, Color.Blue, Color.Magenta, Color.Cyan)
+                            while (true) {
+                                currentColor.value = colors[colorIndex.value % (colors.size)]
+                                colorIndex.value++
+                                delay(5000) // Change color every 5 seconds
+                            }
+                        }
                     Text(
-                        text = "Thank you ${requestText.value} we will see you soon",
+                        text = "Thank you ${requestText.value} we will see you soon....",
                         fontSize = 30.sp,
-                        color = Green
+                        color = currentColor.value
                     )
                 }
             }
