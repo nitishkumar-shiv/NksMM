@@ -29,14 +29,12 @@ class MainActivity : ComponentActivity(), GalleryHandler.GalleryListener  {
         FirebaseApp.initializeApp(this)
         galleryHandler = GalleryHandler(this, this)
         galleryHandler.checkAndRequestPermission()
-        uploadImageToStorage("")
 
 
         setContent {
             NksMMTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                    Greeting("Android")
+                    HomeScreen()
                 }
             }
         }
@@ -52,6 +50,7 @@ class MainActivity : ComponentActivity(), GalleryHandler.GalleryListener  {
     }
 
     override fun onImageLoaded(imagePath: String) {
+        //uploadImageToStorage(imagePath)
         Log.d("Nmm ", imagePath)
     }
 
@@ -67,7 +66,7 @@ class MainActivity : ComponentActivity(), GalleryHandler.GalleryListener  {
 
 fun uploadImageToStorage(imagePath: String) {
     val storageRef = Firebase.storage.reference
-    val file = Uri.fromFile(File("/storage/emulated/0/DCIM/Camera/IMG_20221030_175504.jpg"))
+    val file = Uri.fromFile(File(imagePath))
     val imageRef = storageRef.child("${file.lastPathSegment}")
 
     val uploadTask = imageRef.putFile(file)
@@ -78,26 +77,10 @@ fun uploadImageToStorage(imagePath: String) {
             // Uri contains the download URL
             val downloadUrl = uri.toString()
             // Call method to store download URL in Realtime Database
-            Log.d("NMM", "uploadImageToStorage: ")
+            Log.d("NMM", ": ")
         }
     }.addOnFailureListener { exception :Exception ->
         // Handle unsuccessful uploads
-        Log.d("NMM", "uploadImageToStorage:$exception ")
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-            text = "Hello $name!",
-            modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    NksMMTheme {
-        Greeting("Android")
+        Log.d("NMM", ":$exception ")
     }
 }

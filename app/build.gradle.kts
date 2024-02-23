@@ -67,4 +67,6 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:32.7.2"))
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.firebase:firebase-storage")
+    implementation("com.github.fracassi-marco:JetChart:1.3.7")
+
 }
