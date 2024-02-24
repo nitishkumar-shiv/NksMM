@@ -122,7 +122,36 @@ fun HomeScreen(
                 "The world's largest earthquake was a magnitude 9.5 in Bio-Bio, Chile on May 22, 1960, according to the U.S. Geological Survey (USGS).\n" +
                 "\n"),
         Home(imageID = R.drawable.image11, heading = "10. THE HOTTEST SPOT IS IN LIBYA",content = "The fiery award for Earth’s hottest spot goes to El Azizia, Libya, where temperature records from weather stations reveal it hit 136 degrees Fahrenheit (57.8 degrees Celsius) on Sept. 13, 1922, according to NASA Earth Observatory. There have likely been hotter locations beyond the network of weather stations"),
-    )
+        Home(imageID = R.drawable.image12, heading = "11. THE COLDEST PLACE IS IN ANTARCTICA\n",content = "It may come as no surprise that the coldest place on Earth can be found in Antarctica, but the chill factor is somewhat unbelievable. Winter temperatures there can drop below minus 100 degrees F (minus 73 degrees C).\n" +
+                "\n" +
+                "The lowest temperature ever recorded on Earth came from Russia's Vostok Station, where records show the air plunged to a bone-chilling minus 128.6 degrees F (minus 89.2 degrees C) on July 21,1983, according to the World Meteorological Organization (WMO)."),
+        Home(imageID = R.drawable.image13, heading = "12. ANTARCTICA IS AN EXTREME CONTINENT\n",content = "The southern continent is a place of extremes. According to the American Museum of Natural History, the Antarctic ice cap contains some 70 percent of Earth's fresh water and about 90 percent of its ice, even though it is only the fifth largest continent."),
+        Home(imageID = R.drawable.image14, heading = "13. THERE ARE GIANT STALAGMITES\n",content = "Spelunkers ahoy! The largest confirmed stalagmite in the world can be found in Cuba in the Cuevo San Martin Infierno, according to the journal Acta Carsologica. This behemoth rises 220 feet (67.2 meters) tall. (Shown here, a photo of a stalagmite in a northwest Yucatan peninsula cave.)\n" +
+                "\n"),
+        Home(imageID = R.drawable.image15, heading = "14. THERE'S UNEVEN GRAVITY\n",content = "Because our globe isn't a perfect sphere, its mass is distributed unevenly. And uneven mass means slightly uneven gravity.\n" +
+                "\n" +
+                "One mysterious gravitational anomaly is in the Hudson Bay of Canada . This area has lower gravity than other regions, and a 2007 study finds that now-melted glaciers are to blame.\n" +
+                "\n" +
+                "The ice that once cloaked the area during the last ice age has long since melted, but the Earth hasn't entirely snapped back from the burden. Since gravity over an area is proportional to the mass atop that region, and the glacier's imprint pushed aside some of the Earth's mass, gravity is a bit less strong in the ice sheet's imprint. \n" +
+                "\n" +
+                "The slight deformation of the crust explains 25 percent to 45 percent of the unusually low gravity; the rest may be explained by a downward drag caused the motion of magma in Earth's mantle (the layer just beneath the crust), researchers reported in the journal Science."),
+        Home(imageID = R.drawable.image16, heading = "15. THE MAGNETIC POLE CREEPS\n",content = "Earth has a magnetic field because of the ocean of hot, liquid metal that sloshes around its solid iron core, or that's what geophysicists are pretty certain is the cause. This flow of liquid creates electric currents, which, in turn, generate the magnetic field. \n" +
+                "\n" +
+                "Since the early 19th century, Earth's magnetic north pole has been creeping northward by more than 600 miles (1,100 kilometers), according to NASA scientists.\n" +
+                "\n" +
+                "The rate of movement has increased, with the pole migrating northward at about 40 miles (64 km) per year currently, compared with the 10 miles (16 km) per year estimated in the 20th century."),
+        Home(imageID = R.drawable.image17, heading = "16. THE POLE FLIP-FLOPS\n",content = "In fact, over the past 20 million years, our planet has settled into a pattern of a pole reversal about every 200,000 to 300,000 years, according to the journal Nature. As of 2012, however, it has been more than twice that long since the last reversal.\n" +
+                "\n" +
+                "These reversals aren't split-second flips, and instead occur over hundreds or thousands of years. During this lengthy stint, the magnetic poles start to wander away from the region around the spin poles (the axis around which our planet spins), and eventually end up switched around, according to Cornell University astronomers."),
+        Home(imageID = R.drawable.image18, heading = "17. THERE'S A TIE FOR TALLEST MOUNTAIN\n",content = "The title for tallest mountain goes to either Mount Everest or Mauna Kea. The summit of Mount Everest is higher above sea level than the summit of any other mountain, extending some 29,029 feet (8,848 meters) high, according to the Indian Journal of History of Science. However, when measured from its true base to summit, Mauna Kea takes the prize, measuring a length of about 56,000 feet (17,170 m), according to the USGS. \n" +
+                "\n" +
+                "Here are some of Mauna Kea's detailed measurements, according to the Hawaii Center for Volcanology: The highest point is 13,680 ft (4,170 m) above sea level; the flanks of Mauna Loa continue another 16,400 ft (5,000 m) below sea level to the seafloor; and the volcano's central portion has depressed the seafloor another 26,000 ft (8,000 m) in the shape of an inverted cone, reflecting the profile of the volcano above it.\n" +
+                "\n"),
+        Home(imageID = R.drawable.image19, heading = "18. EARTH ONCE HAD TWO MOONS?\n",content = "Earth may once have had two moons, according to Space.com. A teensy second moon — spanning about 750 miles (1,200 km) wide — may have orbited Earth before it catastrophically slammed into the other one. This titanic clash may explain why the two sides of the surviving lunar satellite are so different from each other, said scientists in the Aug. 4, 2011, issue of the journal Nature."),
+        Home(imageID = R.drawable.image20, heading = "19. WE MAY STILL HAVE A SECOND MOON?\n",content = "Some scientists claim Earth still has two moons. According to researchers reporting in the Dec. 20, 2011, issue of the planetary science journal ICARUS, a space rock at least 3.3-feet (1-meter) wide orbits Earth at any given time. They're not always the same rock, but rather an ever-changing cast of \"temporary moons,\" say the scientists. \n" +
+                "\n" +
+                "Their theoretical model posits that our planet's gravity captures asteroids as they pass near us on their way around the sun; when one of these space rocks gets drawn in, it typically makes three irregularly shaped swings around Earth, staying with us for about nine months before hurtling on its way. "),
+        )
 
     LazyColumn(
         modifier = Modifier
